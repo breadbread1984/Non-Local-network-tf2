@@ -24,6 +24,6 @@ if __name__ == "__main__":
 
   assert tf.executing_eagerly();
   nonlocalblock = NonLocalBlock();
-  a = tf.constant(np.random.normal(size = (8,10,8,4, 1024)));
+  a = tf.constant(np.random.normal(size = (1,32,224,224, 256)));
   b = nonlocalblock(a);
   nonlocalblock.save('nonlocalblock.h5');
